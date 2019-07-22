@@ -27,7 +27,22 @@ class PostList extends Component {
     if (!this.props.posts) {
       return <div>Loading..</div>;
     }
-    return <div className="ui relaxed divided list">{this.renderList()}</div>;
+    return (
+      <div>
+        <div style={{ height: "400px", width: "100%" }}>
+          <object
+            id="previewItem"
+            data="https://edusanjal.com/media/brochure/redux-book.pdf#toolbar=0&scrollbar=0&navpanes=0&view=FitH"
+            type="application/pdf"
+            width="100%"
+            height="100%"
+            key="https://edusanjal.com/media/brochure/redux-book.pdf"
+            aria-labelledby="Preview Item"
+          />
+        </div>
+        <div className="ui relaxed divided list">{this.renderList()}</div>
+      </div>
+    );
   }
 }
 
